@@ -7,5 +7,7 @@
         unzip
         python3
         killall
+        libnotify
+        dunst
     ];
 }
