@@ -4,6 +4,6 @@
         libreoffice-fresh
         hunspell
         hunspellDicts.en_US
-        hunspellDicts.nb_no
+        hunspellDicts.nb_NO
     ];
 }

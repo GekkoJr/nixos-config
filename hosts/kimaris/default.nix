@@ -5,6 +5,7 @@
 } : {
 	imports = [
 		../../modules/core
+#		../../modules/office
 
 		#include hardware config
 		./hardware-configuration.nix
