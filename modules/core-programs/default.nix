@@ -5,5 +5,6 @@
 		./obsidian.nix
 		./via.nix
 		./spotify.nix
+		./utilities.nix
 	];
 }
