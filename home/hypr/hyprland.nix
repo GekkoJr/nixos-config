@@ -2,7 +2,7 @@
 {
 	wayland.windowManager.hyprland = {
 		enable = true;
-		settings {
+		settings = {
 			"$mod" = "SUPER";
 			exec-once = [
 				"hyprpaper"
@@ -15,7 +15,7 @@
 				"$mod, C, killactive,"
 				"$mod, F, fullscreen"
 				"$mod, L, exec, hyprlock"
-				"$mod, CTRL, V, togglefloating"
+				"$mod CTRL, V, togglefloating"
 				"$mod, M, exit,"
 
 				"$mod, S, togglespecialworkspace, magic"
@@ -43,7 +43,7 @@
 
 			input = {
 				kb_layout = "no";
-			}
+			};
 		};
 	};
 }

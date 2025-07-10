@@ -22,6 +22,8 @@
 	# enable networking
 	networking.networkmanager.enable = true;
 	
+	#enable opengl
+	hardware.opengl.enable = true;
 
 	#Do not change!
 	system.stateVersion = "25.05";
