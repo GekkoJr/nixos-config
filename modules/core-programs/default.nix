@@ -6,6 +6,5 @@
 		./via.nix
 		./spotify.nix
 		./utilities.nix
-		./vesktop.nix
 	];
 }

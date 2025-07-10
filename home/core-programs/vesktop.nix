@@ -2,5 +2,5 @@
 {
     programs.vesktop = {
         enable = true;
-    }
+    };
 }

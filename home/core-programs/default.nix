@@ -5,5 +5,6 @@
 		./git.nix
 		./vscode.nix
 		./zsh.nix
+		./vesktop.nix
 	];
 }
