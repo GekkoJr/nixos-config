@@ -3,6 +3,6 @@
 	imports = [
 		./firefox.nix
 		./git.nix
-		./vscode
+		./vscode.nix
 	];
 }
