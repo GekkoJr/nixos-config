@@ -11,7 +11,7 @@
 			bind = [
 				"$mod, Q, exec, kitty"
 				"$mod, E, exec, thunar"
-				"$mod, R, exec, wofi --show dmenu"
+				"$mod, R, exec, wofi --show drun"
 				
 				"$mod, C, killactive,"
 				"$mod, F, fullscreen"
