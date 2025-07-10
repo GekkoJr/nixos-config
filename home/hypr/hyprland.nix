@@ -6,6 +6,7 @@
 			"$mod" = "SUPER";
 			exec-once = [
 				"hyprpaper"
+				"dunst"
 			];
 
 			bind = [
