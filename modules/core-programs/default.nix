@@ -2,5 +2,8 @@
 {
 	imports = [
 		./hyprland.nix
+		./obsidian.nix
+		./via.nix
+		./spotify.nix
 	];
 }
