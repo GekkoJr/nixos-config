@@ -4,15 +4,6 @@
 	username,
 	...
 }: {
-	# Creating my user (gekko)
-	users.users.gekko = {
-		isNormalUser = true;
-		extraGroups = [
-			"networkmanager"
-			"wheel"
-		];
-	};
-
 	nix.settings = {
 	#enable flakes
 	experimental-features = [
@@ -26,9 +17,6 @@
 
 	#time zone 
 	time.timeZone = "Europe/Oslo";
-
-	# set the keyboard locale 
-	i18n.defaultLocale = "en_GB.UTF-8";
 	
 	environment.systemPackages = with pkgs; [
 		neovim
@@ -40,7 +28,5 @@
 
 	security.polkit.enable = true;
 
-	# make keyboard usable 
-	services.xserver.xkb.layout = "no";
-	console.keyMap = "no";
+	hardware.graphics.enable = true;
 }
