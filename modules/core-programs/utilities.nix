@@ -6,5 +6,6 @@
         zip
         unzip
         python3
+        killall
     ];
 }
