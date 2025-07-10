@@ -7,6 +7,6 @@
 		./boot.nix
 		./audio.nix
 		./bluetooth.nix
-		./hyprland.nix
+		../core-programs
 	];
 }
