@@ -1,7 +1,7 @@
 {...}:
 {
 	services = {
-		pulseaudio.enable.false;
+		pulseaudio.enable = false;
 		pipewire = {
 			enable = true;
 			alsa.enable = true;

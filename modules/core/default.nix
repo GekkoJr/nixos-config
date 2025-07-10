@@ -6,5 +6,6 @@
 		./users.nix
 		./boot.nix
 		./audio.nix
+		./bluetooth.nix
 	];
 }
