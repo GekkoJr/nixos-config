@@ -1,5 +1,9 @@
 {config, pkgs, ...}:
 {
+	imports = [
+		../../home/hypr
+	];
+
 	home.username = "gekko";
 	home.homeDirectory = "/home/gekko";
 

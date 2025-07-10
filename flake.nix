@@ -27,7 +27,7 @@
 				{
 					home-manager.useGlobalPkgs = true;
 					home-manager.useUserPackages = true;
-					home-manager.users.gekko = ./hosts/kimaris/home.nix
+					home-manager.users.gekko = ./hosts/kimaris/home.nix;
 				}
 			];
 			};

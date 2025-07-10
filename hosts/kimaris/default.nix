@@ -5,7 +5,6 @@
 } : {
 	imports = [
 		../../modules/base-system.nix
-		../../modules/hyp../../modules/hypr
 
 		#include hardware config
 		./hardware-configuration.nix
