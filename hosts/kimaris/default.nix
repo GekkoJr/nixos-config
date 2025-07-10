@@ -6,6 +6,7 @@
 	imports = [
 		../../modules/core
 #		../../modules/office
+		../../modules/games
 
 		#include hardware config
 		./hardware-configuration.nix
