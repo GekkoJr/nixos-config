@@ -5,9 +5,13 @@
 		# using nixos unstable
 		nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
 		
-		#adding NUR for firefox extensions
+		# adding NUR for firefox extensions
 		nur.url = "github:nix-community/NUR";
 		nur.inputs.nixpkgs.follows = "nixpkgs";
+
+		# adding stylix for theming
+		stylix.url = "github:danth/stylix";
+		stylix.inputs.nixpkgs.follows = "nixpkgs";
 
 		# adding home manager for dotfiles
 		home-manager.url = "github:nix-community/home-manager";
@@ -19,6 +23,7 @@
 		nixpkgs,
 		home-manager,
 		nur,
+		stylix,
 		...
 	}: {
 	nixosConfigurations = {
@@ -29,6 +34,7 @@
 			modules = [
 				./hosts/kimaris
 				nur.modules.nixos.default
+				stylix.nixosModules.stylix
 				home-manager.nixosModules.home-manager
 				{
 					home-manager.useGlobalPkgs = true;

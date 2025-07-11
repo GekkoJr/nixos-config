@@ -8,5 +8,6 @@
 		./audio.nix
 		./bluetooth.nix
 		../core-programs
+		./stylix
 	];
 }
