@@ -1,7 +1,6 @@
 {config, pkgs, ...}:
 {
 	imports = [
-		../../home/hypr
 		../../home/core-programs
 	];
 

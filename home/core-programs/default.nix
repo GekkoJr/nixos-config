@@ -6,5 +6,6 @@
 		./vscode.nix
 		./zsh.nix
 		./vesktop.nix
+		../hypr
 	];
 }

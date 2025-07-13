@@ -6,8 +6,9 @@
 		mutableExtensionsDir = false;
 		profiles.default = {
 			extensions = [
-				pkgs.vscode-extensions.bbenoist.nix
-				pkgs.vscode-extensions.ms-python.python
+				pkgs.vscode-extensions.bbenoist.nix # nix support
+				pkgs.vscode-extensions.ms-python.python # python support
+				pkgs.vscode-extensions.leonardssh.vscord # Discord rich prescence
 			];
 		};
 	};

@@ -8,6 +8,7 @@
 #		../../modules/office
 #		../../modules/games
 #		../../modules/design
+		../../modules/dev
 
 		#include hardware config
 		./hardware-configuration.nix
