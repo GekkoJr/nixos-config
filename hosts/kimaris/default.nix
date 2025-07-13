@@ -7,7 +7,7 @@
 		../../modules/core
 #		../../modules/office
 #		../../modules/games
-		../../modules/design
+#		../../modules/design
 
 		#include hardware config
 		./hardware-configuration.nix
