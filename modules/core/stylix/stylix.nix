@@ -26,6 +26,5 @@
         };
         };
 
-        autoEnable = false;
     };
 }
