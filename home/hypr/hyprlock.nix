@@ -1,4 +1,4 @@
-{...}:
+{config, ...}:
 {
 	programs.hyprlock = {
 		enable = true;
@@ -8,6 +8,12 @@
 #				hide_cursor = true;
 			};
 			
+			background = {
+				monitor = "";
+				path = "${config.stylix.image}";
+				blur_passes = 0;
+			};
+
 			input-field = {
 				monitor = "";
 				size = "200,30";
