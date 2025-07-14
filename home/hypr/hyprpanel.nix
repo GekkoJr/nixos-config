@@ -25,6 +25,10 @@
                 clock = {
                     format = "%R";
                 };
+
+                spacing = {
+                    outerSpacing = "8px";
+                };
             };
 
             menus = {
@@ -39,12 +43,17 @@
                         location = "Oslo";
                     };
                 };
+
+                dashboard = {
+                    shortcuts.enabled = false;
+                    directories.enabled = false;
+                };
             };
 
             theme = {
                 font = {
                     name = "Recursive Sans Casual Static Italic";
-                    size = "16";
+                    size = "15";
                 };
 
                 notification.opacity = 80;
@@ -53,6 +62,7 @@
                     menus.opacity = 100;
                     transparent = true;
                     border.location = "none";
+                    outer_spacing = "8px";
                 };
             };
         };

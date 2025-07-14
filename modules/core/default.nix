@@ -9,5 +9,6 @@
 		./bluetooth.nix
 		../core-programs
 		./stylix
+		./upower.nix
 	];
 }
