@@ -63,7 +63,7 @@
                     size = "15";
                 };
 
-                notification.opacity = 80;
+                notification.opacity = 100;
 
                 bar = {
                     menus.opacity = 100;
