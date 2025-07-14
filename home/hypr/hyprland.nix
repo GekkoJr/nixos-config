@@ -4,10 +4,6 @@
 		enable = true;
 		settings = {
 			"$mod" = "SUPER";
-			exec-once = [
-				"hyprpaper"
-				"dunst"
-			];
 
 			bind = [
 				"$mod, Q, exec, kitty"

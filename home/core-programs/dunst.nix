@@ -1,7 +1,7 @@
 {pkgs, ...}:
 {
     service.dunst = {
-        enable = true;
+        enable = false;
 
         iconTheme = {
             name = "Adwaita";
