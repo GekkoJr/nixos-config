@@ -6,7 +6,7 @@
 	imports = [
 		../../modules/core
 #		../../modules/office
-#		../../modules/games
+		../../modules/games
 #		../../modules/design
 		../../modules/dev
 
