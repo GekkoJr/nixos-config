@@ -8,7 +8,6 @@
 		hyprshot
 		kitty
 		wofi
-		xfce.thunar
 		wofi
 		playerctl
 		brightnessctl

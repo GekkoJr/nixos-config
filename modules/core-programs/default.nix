@@ -7,5 +7,6 @@
 		./spotify.nix
 		./utilities.nix
 		./hyprshot.nix
+		./thunar.nix
 	];
 }

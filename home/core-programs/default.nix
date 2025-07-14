@@ -7,5 +7,6 @@
 		./zsh.nix
 		./vesktop.nix
 		../hypr
+		./gtk.nix
 	];
 }

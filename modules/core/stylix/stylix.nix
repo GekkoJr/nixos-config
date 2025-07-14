@@ -23,8 +23,12 @@
             emoji = {
                 name = "Noto Color Emoji";
                 package = pkgs.noto-fonts-emoji-blob-bin;
+            };
         };
+        cursor = {
+            name = "phinger-cursors-dark";
+            package = pkgs.phinger-cursors;
+            size = 32;
         };
-
     };
 }

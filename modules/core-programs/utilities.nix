@@ -9,5 +9,6 @@
         killall
         libnotify
         dunst
+        loupe
     ];
 }
