@@ -39,6 +39,7 @@
                     };
 
                     weather = {
+                        enabled = false;
                         unit = "metric";
                         location = "Oslo";
                     };
