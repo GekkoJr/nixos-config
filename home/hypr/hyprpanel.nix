@@ -48,6 +48,13 @@
                     shortcuts.enabled = false;
                     directories.enabled = false;
                 };
+
+                power = {
+                    lowBatteryNotification = true;
+                    lowBatteryNotificationText = "Battery is running low ($POWER_LEVEL %).\n\nPlease charge soon :p.";
+                    lowBatteryNotificationTitle = "Warning: Low Power :/";
+                    lowBatteryThreshold = 20;
+                };
             };
 
             theme = {
