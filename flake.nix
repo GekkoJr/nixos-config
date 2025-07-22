@@ -42,7 +42,24 @@
 					home-manager.users.gekko = ./hosts/kimaris/home.nix;
 				}
 			];
-			};
+		};
+
+		#lenovo yoga slim 7i
+		asmodeus = nixpkgs.lib.nixosSystem {
+			system = "x86_64-linux";
+
+			modules = [
+				./hosts/asmodeus
+				nur.modules.nixos.default
+				stylix.nixosModules.stylix
+				home-manager.nixosModules.home-manager
+				{
+					home-manager.useGlobalPkgs = true;
+					home-manager.useUserPackages = true;
+					home-manager.users.gekko = ./hosts/asmodeus/home.nix;
+				}
+			];
 		};
 	};
+};
 }
