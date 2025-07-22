@@ -5,6 +5,10 @@
 		settings = {
 			"$mod" = "SUPER";
 
+			monitor = [
+				"desc:Samsung Display Corp. 0x4187, 1920x1200@60, 0x0, 1"
+			];
+
 			bind = [
 				"$mod, Q, exec, kitty"
 				"$mod, E, exec, thunar"
