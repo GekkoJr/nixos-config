@@ -61,7 +61,7 @@
             theme = {
                 font = {
                     name = "Recursive Sans Casual Static Italic";
-                    size = "15";
+                    size = "20";
                 };
 
                 notification.opacity = 100;
