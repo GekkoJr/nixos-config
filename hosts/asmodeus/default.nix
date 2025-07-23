@@ -9,6 +9,7 @@
 		../../modules/games
 		../../modules/design
 		../../modules/dev
+		../../modules/intel-laptop-battery
 
 		#include hardware config
 		./hardware-configuration.nix
