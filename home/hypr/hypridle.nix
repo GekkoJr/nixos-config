@@ -7,7 +7,7 @@
             general = {
                 after_sleep_cmd = "hyprctl dispatch dpms on";
                 ignore_dbus_inhibit = false;
-                before_sleep_cmd = "hyprlock";
+                before_sleep_cmd = "hyprlock; playerctl pause";
                 lock_cmd = "pidof hyprlock || hyprlock";
             };
 
