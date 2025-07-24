@@ -1,7 +1,7 @@
-{...}:
+{ ... }:
 {
-    imports = [
-        ./steam.nix
-        ./heroic.nix
-    ];
+  imports = [
+    ./steam.nix
+    ./heroic.nix
+  ];
 }

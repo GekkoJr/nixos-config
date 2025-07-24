@@ -1,8 +1,8 @@
-{...}:
+{ ... }:
 {
-    imports = [
-        ./freecad.nix
-        ./kicad.nix
-        ./krita.nix
-    ];
+  imports = [
+    ./freecad.nix
+    ./kicad.nix
+    ./krita.nix
+  ];
 }

@@ -1,31 +1,31 @@
-{...}:
+{ ... }:
 {
-    services.hypridle = {
-        enable = true;
+  services.hypridle = {
+    enable = true;
 
-        settings = {
-            general = {
-                after_sleep_cmd = "hyprctl dispatch dpms on";
-                ignore_dbus_inhibit = false;
-                before_sleep_cmd = "hyprlock; playerctl pause";
-                lock_cmd = "pidof hyprlock || hyprlock";
-            };
+    settings = {
+      general = {
+        after_sleep_cmd = "hyprctl dispatch dpms on";
+        ignore_dbus_inhibit = false;
+        before_sleep_cmd = "hyprlock; playerctl pause";
+        lock_cmd = "pidof hyprlock || hyprlock";
+      };
 
-            listener = [
-                {
-                timeout = 300;
-                on-timeout = "hyprlock";
-                }
-                {
-                timeout = 420;
-                on-timeout = "hyprctl dispatch dpms off";
-                on-resume = "hyprctl dispatch dpms on";
-                }
-                {
-                    timeout = 500;
-                    on-timeout = "systemctl suspend";
-                }
-        ];
-        };
+      listener = [
+        {
+          timeout = 300;
+          on-timeout = "hyprlock";
+        }
+        {
+          timeout = 420;
+          on-timeout = "hyprctl dispatch dpms off";
+          on-resume = "hyprctl dispatch dpms on";
+        }
+        {
+          timeout = 500;
+          on-timeout = "systemctl suspend";
+        }
+      ];
     };
+  };
 }

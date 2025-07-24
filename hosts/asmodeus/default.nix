@@ -1,25 +1,26 @@
 {
-	config,
-	pkgs,
-	...
-} : {
-	imports = [
-		../../modules/core
-		../../modules/office
-		../../modules/games
-		../../modules/design
-		../../modules/dev
-		../../modules/intel-laptop-battery
+  config,
+  pkgs,
+  ...
+}:
+{
+  imports = [
+    ../../modules/core
+    ../../modules/office
+    ../../modules/games
+    ../../modules/design
+    ../../modules/dev
+    ../../modules/intel-laptop-battery
 
-		#include hardware config
-		./hardware-configuration.nix
-	];
+    #include hardware config
+    ./hardware-configuration.nix
+  ];
 
-	networking.hostName = "asmodeus";
+  networking.hostName = "asmodeus";
 
-	# enable networking
-	networking.networkmanager.enable = true;
-	
-	#Do not change!
-	system.stateVersion = "25.05";
+  # enable networking
+  networking.networkmanager.enable = true;
+
+  #Do not change!
+  system.stateVersion = "25.05";
 }

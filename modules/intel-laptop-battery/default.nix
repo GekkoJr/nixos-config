@@ -1,6 +1,6 @@
-{...}: 
+{ ... }:
 {
-    imports = [
-        ./power-opt.nix
-    ];
+  imports = [
+    ./power-opt.nix
+  ];
 }

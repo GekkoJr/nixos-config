@@ -1,24 +1,25 @@
 {
-	config,
-	pkgs,
-	...
-} : {
-	imports = [
-		../../modules/core
-#		../../modules/office
-		../../modules/games
-#		../../modules/design
-		../../modules/dev
+  config,
+  pkgs,
+  ...
+}:
+{
+  imports = [
+    ../../modules/core
+    #		../../modules/office
+    ../../modules/games
+    #		../../modules/design
+    ../../modules/dev
 
-		#include hardware config
-		./hardware-configuration.nix
-	];
+    #include hardware config
+    ./hardware-configuration.nix
+  ];
 
-	networking.hostName = "kimaris";
+  networking.hostName = "kimaris";
 
-	# enable networking
-	networking.networkmanager.enable = true;
-	
-	#Do not change!
-	system.stateVersion = "25.05";
+  # enable networking
+  networking.networkmanager.enable = true;
+
+  #Do not change!
+  system.stateVersion = "25.05";
 }

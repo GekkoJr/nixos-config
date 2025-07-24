@@ -1,8 +1,8 @@
-{...}:
+{ ... }:
 {
-    imports = [
-        ./jetbrains.nix
-        ./php.nix
-        ./node.nix
-    ];
+  imports = [
+    ./jetbrains.nix
+    ./php.nix
+    ./node.nix
+  ];
 }

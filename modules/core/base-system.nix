@@ -1,40 +1,41 @@
 {
-	pkgs,
-	lib,
-	username,
-	...
-}: {
-	nix = {
-		settings = {
-			experimental-features = [
-				"nix-command"
-				"flakes"
-			];
-		};
+  pkgs,
+  lib,
+  username,
+  ...
+}:
+{
+  nix = {
+    settings = {
+      experimental-features = [
+        "nix-command"
+        "flakes"
+      ];
+    };
 
-		gc = {
-      		automatic = true;
-      		dates = "weekly";
-      		options = "--delete-older-than 7d";
-    	};
+    gc = {
+      automatic = true;
+      dates = "weekly";
+      options = "--delete-older-than 7d";
+    };
 
-	};
-	
-	# allow unfree packages
-	nixpkgs.config.allowUnfree = true;
+  };
 
-	#time zone 
-	time.timeZone = "Europe/Oslo";
-	
-	environment.systemPackages = with pkgs; [
-		neovim
-		wget
-		curl
-		git
-		neofetch
-	];
+  # allow unfree packages
+  nixpkgs.config.allowUnfree = true;
 
-	security.polkit.enable = true;
+  #time zone
+  time.timeZone = "Europe/Oslo";
 
-	hardware.graphics.enable = true;
+  environment.systemPackages = with pkgs; [
+    neovim
+    wget
+    curl
+    git
+    neofetch
+  ];
+
+  security.polkit.enable = true;
+
+  hardware.graphics.enable = true;
 }

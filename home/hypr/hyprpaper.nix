@@ -1,16 +1,16 @@
-{config, ...}:
+{ config, ... }:
 {
-    services.hyprpaper = {
-        enable = true;
+  services.hyprpaper = {
+    enable = true;
 
-        settings = {
-            preload = [
-                "${config.stylix.image}"
-            ];
+    settings = {
+      preload = [
+        "${config.stylix.image}"
+      ];
 
-            wallpaper = [
-                ",${config.stylix.image}"
-            ];
-        };
+      wallpaper = [
+        ",${config.stylix.image}"
+      ];
     };
+  };
 }

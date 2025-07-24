@@ -1,7 +1,7 @@
-{...}:
+{ ... }:
 {
-    imports = [
-        ./office.nix
-        ./geogebra.nix
-    ];
+  imports = [
+    ./office.nix
+    ./geogebra.nix
+  ];
 }

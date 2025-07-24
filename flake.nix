@@ -1,65 +1,67 @@
 {
-	description = "GekkoJr's nixos config (i don't really know what im doing...)";
+  description = "GekkoJr's nixos config (i don't really know what im doing...)";
 
-	inputs = {
-		# using nixos unstable
-		nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
-		
-		# adding NUR for firefox extensions
-		nur.url = "github:nix-community/NUR";
-		nur.inputs.nixpkgs.follows = "nixpkgs";
+  inputs = {
+    # using nixos unstable
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
 
-		# adding stylix for theming
-		stylix.url = "github:danth/stylix";
-		stylix.inputs.nixpkgs.follows = "nixpkgs";
+    # adding NUR for firefox extensions
+    nur.url = "github:nix-community/NUR";
+    nur.inputs.nixpkgs.follows = "nixpkgs";
 
-		# adding home manager for dotfiles
-		home-manager.url = "github:nix-community/home-manager";
-		home-manager.inputs.nixpkgs.follows = "nixpkgs";
-	};
-	
-	outputs = inputs@ {
-		self,
-		nixpkgs,
-		home-manager,
-		nur,
-		stylix,
-		...
-	}: {
-	nixosConfigurations = {
-		# config for the crappy thinkpad :/
-		kimaris = nixpkgs.lib.nixosSystem {
-			system = "x86_64-linux";
-			
-			modules = [
-				./hosts/kimaris
-				nur.modules.nixos.default
-				stylix.nixosModules.stylix
-				home-manager.nixosModules.home-manager
-				{
-					home-manager.useGlobalPkgs = true;
-					home-manager.useUserPackages = true;
-					home-manager.users.gekko = ./hosts/kimaris/home.nix;
-				}
-			];
-		};
+    # adding stylix for theming
+    stylix.url = "github:danth/stylix";
+    stylix.inputs.nixpkgs.follows = "nixpkgs";
 
-		#lenovo yoga slim 7i
-		asmodeus = nixpkgs.lib.nixosSystem {
-			system = "x86_64-linux";
+    # adding home manager for dotfiles
+    home-manager.url = "github:nix-community/home-manager";
+    home-manager.inputs.nixpkgs.follows = "nixpkgs";
+  };
 
-			modules = [
-				./hosts/asmodeus
-				nur.modules.nixos.default
-				stylix.nixosModules.stylix
-				home-manager.nixosModules.home-manager
-				{
-					home-manager.useGlobalPkgs = true;
-					home-manager.useUserPackages = true;
-					home-manager.users.gekko = ./hosts/asmodeus/home.nix;
-				}
-			];
-		};
-	};
-};
+  outputs =
+    inputs@{
+      self,
+      nixpkgs,
+      home-manager,
+      nur,
+      stylix,
+      ...
+    }:
+    {
+      nixosConfigurations = {
+        # config for the crappy thinkpad :/
+        kimaris = nixpkgs.lib.nixosSystem {
+          system = "x86_64-linux";
+
+          modules = [
+            ./hosts/kimaris
+            nur.modules.nixos.default
+            stylix.nixosModules.stylix
+            home-manager.nixosModules.home-manager
+            {
+              home-manager.useGlobalPkgs = true;
+              home-manager.useUserPackages = true;
+              home-manager.users.gekko = ./hosts/kimaris/home.nix;
+            }
+          ];
+        };
+
+        #lenovo yoga slim 7i
+        asmodeus = nixpkgs.lib.nixosSystem {
+          system = "x86_64-linux";
+
+          modules = [
+            ./hosts/asmodeus
+            nur.modules.nixos.default
+            stylix.nixosModules.stylix
+            home-manager.nixosModules.home-manager
+            {
+              home-manager.useGlobalPkgs = true;
+              home-manager.useUserPackages = true;
+              home-manager.users.gekko = ./hosts/asmodeus/home.nix;
+            }
+          ];
+        };
+      };
+    };
 }

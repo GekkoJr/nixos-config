@@ -1,6 +1,6 @@
-{pkgs, ...}: 
+{ pkgs, ... }:
 {
-    environment.systemPackages = with pkgs; [
-        nodePackages_latest.nodejs
-    ];
+  environment.systemPackages = with pkgs; [
+    nodePackages_latest.nodejs
+  ];
 }

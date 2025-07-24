@@ -1,12 +1,12 @@
-{config, pkgs, ...}:
+{ config, pkgs, ... }:
 {
-	imports = [
-		../../home/core-programs
-	];
+  imports = [
+    ../../home/core-programs
+  ];
 
-	home.username = "gekko";
-	home.homeDirectory = "/home/gekko";
+  home.username = "gekko";
+  home.homeDirectory = "/home/gekko";
 
-	home.stateVersion = "25.05";
-	programs.home-manager.enable = true;
+  home.stateVersion = "25.05";
+  programs.home-manager.enable = true;
 }

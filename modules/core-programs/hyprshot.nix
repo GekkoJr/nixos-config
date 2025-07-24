@@ -1,6 +1,6 @@
-{pkgs, ...}:
+{ pkgs, ... }:
 {
-    environment.systemPackages = with pkgs; [
-        hyprshot
-    ];
+  environment.systemPackages = with pkgs; [
+    hyprshot
+  ];
 }

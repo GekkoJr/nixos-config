@@ -1,12 +1,12 @@
-{...}: 
+{ ... }:
 {
-	imports = [
-		./firefox.nix
-		./git.nix
-		./vscode.nix
-		./zsh.nix
-		./vesktop.nix
-		../hypr
-		./gtk.nix
-	];
+  imports = [
+    ./firefox.nix
+    ./git.nix
+    ./vscode.nix
+    ./zsh.nix
+    ./vesktop.nix
+    ../hypr
+    ./gtk.nix
+  ];
 }

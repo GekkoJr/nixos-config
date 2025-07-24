@@ -1,11 +1,11 @@
-{pkgs, ...}:
+{ pkgs, ... }:
 {
-    environment.systemPackages = with pkgs; [
-        powertop
-        thermald
-    ];
+  environment.systemPackages = with pkgs; [
+    powertop
+    thermald
+  ];
 
-    services.power-profiles-daemon = {
-        enable = true;
-    };
+  services.power-profiles-daemon = {
+    enable = true;
+  };
 }

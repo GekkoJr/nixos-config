@@ -1,6 +1,6 @@
-{...}:
+{ ... }:
 {
-    imports = [
-        ./stylix.nix
-    ];
+  imports = [
+    ./stylix.nix
+  ];
 }

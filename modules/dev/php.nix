@@ -1,7 +1,7 @@
-{pkgs, ...}:
+{ pkgs, ... }:
 {
-    environment.systemPackages = with pkgs; [
-        php
-        laravel
-    ];
+  environment.systemPackages = with pkgs; [
+    php
+    laravel
+  ];
 }
