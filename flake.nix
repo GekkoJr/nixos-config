@@ -31,12 +31,7 @@
       howdy-pkg,
       ...
     }:
-    let 
-      overlay-howdy = final: prev: {
-        howdy = howdy-pkg.legacyPackages.${prev.system};
-      };
-
-    in {
+    {
       nixosConfigurations = {
         # config for the crappy thinkpad :/
         kimaris = nixpkgs.lib.nixosSystem {
@@ -58,9 +53,8 @@
         #lenovo yoga slim 7i
         asmodeus = nixpkgs.lib.nixosSystem {
           system = "x86_64-linux";
-
+          specialArgs = { inherit inputs; };
           modules = [
-            ({ config, pkgs, ...}: {nixpkgs.overlays = [overlay-howdy];})
             ./hosts/asmodeus
             nur.modules.nixos.default
             stylix.nixosModules.stylix
