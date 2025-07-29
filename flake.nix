@@ -16,6 +16,9 @@
     # adding home manager for dotfiles
     home-manager.url = "github:nix-community/home-manager";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
+
+    # adding howdy for windows hello like unlocking
+    howdy-pkg.url = "github:fufexan/nixpkgs/howdy";
   };
 
   outputs =
@@ -25,9 +28,15 @@
       home-manager,
       nur,
       stylix,
+      howdy-pkg,
       ...
     }:
-    {
+    let 
+      overlay-howdy = final: prev: {
+        howdy = howdy-pkg.legacyPackages.${prev.system};
+      };
+
+    in {
       nixosConfigurations = {
         # config for the crappy thinkpad :/
         kimaris = nixpkgs.lib.nixosSystem {
@@ -51,6 +60,7 @@
           system = "x86_64-linux";
 
           modules = [
+            ({ config, pkgs, ...}: {nixpkgs.overlays = [overlay-howdy];})
             ./hosts/asmodeus
             nur.modules.nixos.default
             stylix.nixosModules.stylix

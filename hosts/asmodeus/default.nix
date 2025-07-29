@@ -1,6 +1,7 @@
 {
   config,
   pkgs,
+  inputs,
   ...
 }:
 {
@@ -23,4 +24,6 @@
 
   #Do not change!
   system.stateVersion = "25.05";
+
+  environment.systemPackages = [ pkgs.howdy.howdy ];
 }
