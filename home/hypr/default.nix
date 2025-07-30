@@ -6,5 +6,6 @@
     ./hyprpaper.nix
     ./hypridle.nix
     ./hyprpanel.nix
+    ./hyprpolkit.nix
   ];
 }
