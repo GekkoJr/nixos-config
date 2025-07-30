@@ -8,5 +8,6 @@
     ./vesktop.nix
     ../hypr
     ./gtk.nix
+    ./kitty.nix
   ];
 }
