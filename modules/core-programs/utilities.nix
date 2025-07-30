@@ -11,5 +11,6 @@
     dunst
     loupe
     nixfmt-rfc-style
+    geteduroam
   ];
 }
