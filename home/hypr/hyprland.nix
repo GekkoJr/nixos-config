@@ -71,6 +71,11 @@
         layout = "dwindle";
       };
 
+      device = {
+        name = "glorious-model-d";
+        sensitivity = -0.7;
+      };
+
       decoration = {
         rounding = "10";
 
