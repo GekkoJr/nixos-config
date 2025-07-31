@@ -16,7 +16,7 @@
           "$mod, R, exec, wofi --show drun"
 
           "$mod, C, killactive,"
-          "$mod, F, fullscreen,1"
+          "$mod, F, fullscreen"
           "$mod, L, exec, hyprlock"
           "$mod CTRL, V, togglefloating"
           "$mod, M, exit,"

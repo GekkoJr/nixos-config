@@ -10,5 +10,6 @@
     ../core-programs
     ./stylix
     ./upower.nix
+    ./rebuild.nix
   ];
 }
