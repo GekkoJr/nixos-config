@@ -12,5 +12,6 @@
     loupe
     nixfmt-rfc-style
     geteduroam
+    protonvpn-cli
   ];
 }
