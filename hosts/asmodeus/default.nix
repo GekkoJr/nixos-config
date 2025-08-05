@@ -42,7 +42,7 @@
 
         video = {
           dark_threshold = 70;
-          device_path = "/dev/video0";
+          device_path = "/dev/video2";
         };
       };
     };
