@@ -6,51 +6,50 @@
       "$mod" = "SUPER";
 
       monitor = [
-        "desc:Samsung Display Corp. 0x4187, 1920x1200@60, 0x0, 1"
+        "desc:Samsung Display Corp. 0x4187, 1920x1200@60, 0x0, 1, vrr,1, bitdepth, 10 render:cm_auto_hdr=1 cm_fs_passthrough = 0"
       ];
 
-      bind =
-        [
-          "$mod, Q, exec, kitty"
-          "$mod, E, exec, thunar"
-          "$mod, R, exec, wofi --show drun"
+      bind = [
+        "$mod, Q, exec, kitty"
+        "$mod, E, exec, thunar"
+        "$mod, R, exec, wofi --show drun"
 
-          "$mod, C, killactive,"
-          "$mod, F, fullscreen"
-          "$mod, L, exec, hyprlock"
-          "$mod CTRL, V, togglefloating"
-          "$mod, M, exit,"
+        "$mod, C, killactive,"
+        "$mod, F, fullscreen"
+        "$mod, L, exec, hyprlock"
+        "$mod CTRL, V, togglefloating"
+        "$mod, M, exit,"
 
-          "$mod, S, togglespecialworkspace, magic"
-          "$mod SHIFT, S, movetoworkspace, special:magic"
-          "$mod CTRL, S, exec, hyprshot -m region --clipboard-only"
+        "$mod, S, togglespecialworkspace, magic"
+        "$mod SHIFT, S, movetoworkspace, special:magic"
+        "$mod CTRL, S, exec, hyprshot -m region --clipboard-only"
 
-          ", XF86AudioPlay, exec, playerctl play-pause"
-          ", XF86AudioPrev, exec, playerctl previous"
-          ", XF86AudioNext, exec, playerctl next"
+        ", XF86AudioPlay, exec, playerctl play-pause"
+        ", XF86AudioPrev, exec, playerctl previous"
+        ", XF86AudioNext, exec, playerctl next"
 
-          ", XF86AudioMute, exec, wpctl set-mute @DEFAULT_SINK@ toggle"
-          ", XF86AudioLowerVolume, exec, wpctl set-volume @DEFAULT_SINK@ 5%- -l 1.0"
-          ", XF86AudioRaiseVolume, exec, wpctl set-volume @DEFAULT_SINK@ 5%+ -l 1.0"
+        ", XF86AudioMute, exec, wpctl set-mute @DEFAULT_SINK@ toggle"
+        ", XF86AudioLowerVolume, exec, wpctl set-volume @DEFAULT_SINK@ 5%- -l 1.0"
+        ", XF86AudioRaiseVolume, exec, wpctl set-volume @DEFAULT_SINK@ 5%+ -l 1.0"
 
-          ", XF86MonBrightnessUp, exec, brightnessctl set +5%"
-          ", XF86MonBrightnessDown, exec, brightnessctl set 5%-"
-        ]
-        ++ (
-          # adding workspace 1-9
-          builtins.concatLists (
-            builtins.genList (
-              i:
-              let
-                ws = i + 1;
-              in
-              [
-                "$mod, ${if ws != 10 then toString ws else toString 0}, workspace, ${toString ws}"
-                "$mod SHIFT, ${if ws != 10 then toString ws else toString 0}, movetoworkspace, ${toString ws}"
-              ]
-            ) 10
-          )
-        );
+        ", XF86MonBrightnessUp, exec, brightnessctl set +5%"
+        ", XF86MonBrightnessDown, exec, brightnessctl set 5%-"
+      ]
+      ++ (
+        # adding workspace 1-9
+        builtins.concatLists (
+          builtins.genList (
+            i:
+            let
+              ws = i + 1;
+            in
+            [
+              "$mod, ${if ws != 10 then toString ws else toString 0}, workspace, ${toString ws}"
+              "$mod SHIFT, ${if ws != 10 then toString ws else toString 0}, movetoworkspace, ${toString ws}"
+            ]
+          ) 10
+        )
+      );
 
       bindm = [
         "$mod, mouse:272, movewindow"
