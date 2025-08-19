@@ -9,5 +9,6 @@
     ../hypr
     ./gtk.nix
     ./kitty.nix
+    ./thunderbird.nix
   ];
 }

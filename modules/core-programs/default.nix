@@ -8,6 +8,5 @@
     ./utilities.nix
     ./hyprshot.nix
     ./thunar.nix
-    ./thunderbird.nix
   ];
 }
