@@ -6,8 +6,18 @@
       "$mod" = "SUPER";
 
       monitor = [
-        "desc:Samsung Display Corp. 0x4187, 1920x1200@60, 0x0, 1, vrr,1, bitdepth, 10 render:cm_auto_hdr=1 cm_fs_passthrough = 0"
+        #"desc:Samsung Display Corp. 0x4187, 1920x1200@60, 0x0, 1, vrr,1, bitdepth, 10 render:cm_auto_hdr=1 cm_fs_passthrough = 0"
       ];
+
+      monitorv2 = {
+        output = "desc:Samsung Display Corp. 0x4187";
+        mode = "1920x12000@60";
+        position = "0x0";
+        scale = "1";
+        bitdepth = 10;
+        cm = "hdr";
+        sdrbrightness = 1.3;
+      };
 
       bind = [
         "$mod, Q, exec, kitty"
