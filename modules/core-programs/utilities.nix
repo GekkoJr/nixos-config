@@ -13,5 +13,6 @@
     nixfmt-rfc-style
     geteduroam
     protonvpn-cli
+    signal-desktop
   ];
 }

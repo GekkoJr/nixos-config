@@ -28,6 +28,10 @@
   # enable networking
   networking.networkmanager.enable = true;
 
+  environment.systemPackages = with pkgs; [
+    ollama
+  ];
+
   #Do not change!
   system.stateVersion = "25.05";
 
