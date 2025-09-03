@@ -35,10 +35,6 @@
           format = "%R";
           showIcon = false;
         };
-
-        spacing = {
-          outerSpacing = "8px";
-        };
       };
 
       menus = {
@@ -89,7 +85,7 @@
           };
           transparent = true;
           border.location = "none";
-          outer_spacing = "8px";
+          outer_spacing = "3px";
 
           buttons = {
             clock = {
