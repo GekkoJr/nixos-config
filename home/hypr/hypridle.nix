@@ -13,16 +13,16 @@
 
       listener = [
         {
-          timeout = 300;
+          timeout = 180;
           on-timeout = "hyprlock";
         }
         {
-          timeout = 420;
+          timeout = 300;
           on-timeout = "hyprctl dispatch dpms off";
           on-resume = "hyprctl dispatch dpms on";
         }
         {
-          timeout = 500;
+          timeout = 420;
           on-timeout = "systemctl suspend";
         }
       ];
