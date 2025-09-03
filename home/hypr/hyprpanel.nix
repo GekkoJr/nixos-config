@@ -86,6 +86,7 @@
           transparent = true;
           border.location = "none";
           outer_spacing = "3px";
+          margin_bottom = "0";
 
           buttons = {
             clock = {
