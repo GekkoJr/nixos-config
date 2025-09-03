@@ -33,6 +33,7 @@
         "$mod, S, togglespecialworkspace, magic"
         "$mod SHIFT, S, movetoworkspace, special:magic"
         "$mod CTRL, S, exec, hyprshot -m region --clipboard-only"
+        "$mod, H, exec, hyprpanel t bar-0"
 
         ", XF86AudioPlay, exec, playerctl play-pause"
         ", XF86AudioPrev, exec, playerctl previous"
