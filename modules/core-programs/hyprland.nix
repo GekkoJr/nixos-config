@@ -13,4 +13,8 @@
     brightnessctl
     pavucontrol
   ];
+
+  fonts.packages = with pkgs; [
+    font-awesome
+  ];
 }

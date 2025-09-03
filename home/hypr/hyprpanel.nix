@@ -71,8 +71,8 @@
 
       theme = {
         font = {
-          name = "Recursive Sans Casual Static Italic";
-          size = "20";
+          name = "JetBrainsMono Nerd Font Propo";
+          size = 20;
         };
 
         notification.opacity = 100;
