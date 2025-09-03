@@ -33,6 +33,7 @@
 
         clock = {
           format = "%R";
+          showIcon = false;
         };
 
         spacing = {
@@ -65,6 +66,7 @@
           lowBatteryNotificationTitle = "Warning: Low Power :/";
           lowBatteryThreshold = 20;
         };
+
       };
 
       theme = {
@@ -76,10 +78,24 @@
         notification.opacity = 100;
 
         bar = {
-          menus.opacity = 100;
+          menus = {
+            opacity = 100;
+
+            menu = {
+              notifications = {
+                height = "50em";
+              };
+            };
+          };
           transparent = true;
           border.location = "none";
           outer_spacing = "8px";
+
+          buttons = {
+            clock = {
+              spacing = "0";
+            };
+          };
         };
       };
     };
