@@ -14,5 +14,6 @@
     geteduroam
     protonvpn-cli
     signal-desktop
+    ffmpeg
   ];
 }
