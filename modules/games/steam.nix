@@ -10,5 +10,12 @@
     extraPackages = with pkgs; [
       gamescope
     ];
+
+    gamescopeSession.enable = true;
+
   };
+
+  environment.systemPackages = with pkgs; [
+    gamescope
+  ];
 }

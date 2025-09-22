@@ -5,4 +5,5 @@
   #fix keymap
   services.xserver.xkb.layout = "no";
   console.keyMap = "no";
+  hardware.keyboard.qmk.enable = true;
 }

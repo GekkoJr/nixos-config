@@ -1,11 +1,9 @@
 {
   config,
   pkgs,
-  inputs,
   ...
 }:
 {
-  disabledModules = [ "security/pam.nix" ];
   imports = [
     ../../modules/core
     ../../modules/office
@@ -15,11 +13,6 @@
 
     #include hardware config
     ./hardware-configuration.nix
-
-    # howdy stuff
-    "${inputs.howdy-pkg}/nixos/modules/security/pam.nix"
-    "${inputs.howdy-pkg}/nixos/modules/services/security/howdy"
-    "${inputs.howdy-pkg}/nixos/modules/services/misc/linux-enable-ir-emitter.nix"
   ];
 
   networking.hostName = "bael";
@@ -33,4 +26,8 @@
 
   #Do not change!
   system.stateVersion = "25.05";
+
+  hardware.graphics.extraPackages = with pkgs; [
+    rocmPackages.clr.icd
+  ];
 }

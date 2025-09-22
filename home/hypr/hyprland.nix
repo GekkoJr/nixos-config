@@ -9,16 +9,27 @@
         #"desc:Samsung Display Corp. 0x4187, 1920x1200@60, 0x0, 1, vrr,1, bitdepth, 10 render:cm_auto_hdr=1 cm_fs_passthrough = 0"
       ];
 
-      monitorv2 = {
-        output = "desc:Samsung Display Corp. 0x4187";
-        mode = "1920x12000@60";
-        position = "0x0";
-        scale = "1";
-        bitdepth = 10;
-        vrr = "1";
-        #cm = "hdr";
-        #sdrbrightness = 1.3;
-      };
+      monitorv2 = [
+        {
+          output = "desc:Samsung Display Corp. 0x4187";
+          mode = "1920x12000@60";
+          position = "0x0";
+          scale = "1";
+          bitdepth = 10;
+          vrr = "1";
+          #cm = "hdr";
+          #sdrbrightness = 1.3;
+        }
+        {
+          output = "desc:AOC Q27G3XMN 1APQ7JA005063";
+          mode = "2560x1440@180";
+          position = "0x0";
+          bitdepth = 10;
+          #cm = "hdr";
+          #sdrbrightness = 1.2;
+          #sdrsaturation = 1.9;
+        }
+      ];
 
       bind = [
         "$mod, Q, exec, kitty"
@@ -115,6 +126,10 @@
       dwindle = {
         pseudotile = "yes";
         preserve_split = "yes";
+      };
+
+      experimental = {
+        xx_color_management_v4 = true;
       };
 
       xwayland.force_zero_scaling = true;
