@@ -132,6 +132,25 @@
         xx_color_management_v4 = true;
       };
 
+      windowrulev2 = [
+        # Fix linux enable ir emitter stealing focus
+        "nofocus,class:linux-enable-ir-emitter,title:linux-enable-ir-emitter,floating:1"
+
+        # https://github.com/hyprwm/Hyprland/issues/3450#issuecomment-1816761575
+        # -- Fix odd behaviors in IntelliJ IDEs --
+        # Fix splash screen showing in weird places and prevent annoying focus takeovers
+        "center,class:^(jetbrains-.*)$,title:^(splash)$,floating:1"
+        "nofocus,class:^(jetbrains-.*)$,title:^(splash)$,floating:1"
+        "noborder,class:^(jetbrains-.*)$,title:^(splash)$,floating:1"
+
+        # Center popups/find windows
+        "center,class:^(jetbrains-.*)$,title:^( )$,floating:1"
+        "stayfocused,class:^(jetbrains-.*)$,title:^( )$,floating:1"
+        "noborder,class:^(jetbrains-.*)$,title:^( )$,floating:1"
+        #! Disable window flicker when autocomplete or tooltips appear
+        "nofocus,class:^(jetbrains-.*)$,title:^(win.*)$,floating:1"
+      ];
+
       xwayland.force_zero_scaling = true;
     };
   };
