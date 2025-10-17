@@ -15,5 +15,8 @@
     protonvpn-cli
     signal-desktop
     ffmpeg
+    appimage-run
   ];
+
+  programs.nix-ld.enable = true;
 }

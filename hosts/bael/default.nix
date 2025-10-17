@@ -21,13 +21,10 @@
   networking.networkmanager.enable = true;
 
   environment.systemPackages = with pkgs; [
-    ollama-rocm
+    #ollama-rocm
   ];
 
   #Do not change!
   system.stateVersion = "25.05";
 
-  hardware.graphics.extraPackages = with pkgs; [
-    rocmPackages.clr.icd
-  ];
 }
