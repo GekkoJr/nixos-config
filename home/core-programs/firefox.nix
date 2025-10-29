@@ -19,6 +19,33 @@
         default = "ddg";
         order = [ "ddg" ];
       };
+
+      bookmarks = {
+        force = true;
+        settings = [
+          {
+            name = "School";
+            toolbar = false;
+            bookmarks = [
+              {
+                name = "IN1000";
+                url = "https://www.uio.no/studier/emner/matnat/ifi/IN1000/h25/index.html";
+                keyword = "in1000";
+              }
+              {
+                name = "Canvas";
+                url = "http://uio.instructure.com/";
+                keyword = "canvas";
+              }
+              {
+                name = "Devilry";
+                url = "https://devilry.ifi.uio.no/";
+                keyword = "devilry";
+              }
+            ];
+          }
+        ];
+      };
     };
   };
 }
