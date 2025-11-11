@@ -12,7 +12,6 @@
     loupe
     nixfmt-rfc-style
     geteduroam
-    protonvpn-cli
     signal-desktop
     ffmpeg
     appimage-run
