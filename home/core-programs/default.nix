@@ -10,6 +10,5 @@
     ./gtk.nix
     ./kitty.nix
     ./thunderbird.nix
-    ./neovim.nix
   ];
 }

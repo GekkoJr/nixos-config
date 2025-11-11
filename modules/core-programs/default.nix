@@ -9,5 +9,6 @@
     ./hyprshot.nix
     ./thunar.nix
     ./direnv.nix
+    ./nvim.nix
   ];
 }
