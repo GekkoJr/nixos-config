@@ -12,8 +12,7 @@
       '';
       customLuaRC = ''
         -- custom lua config
-        require("catppuccin").setup({flavour = "mocha"})
-        vim.cmd.colorscheme "catppuccin"
+        vim.cmd.colorscheme "habamax"
       '';
       packages.myVimPackage = with pkgs.vimPlugins; {
         # loaded on launch
@@ -21,7 +20,7 @@
           fugitive
           vim-nix
           nvim-treesitter.withAllGrammars
-          catppuccin-nvim
+
         ];
         # manually loadable by calling `:packadd $plugin-name`
         opt = [ ];
