@@ -1,5 +1,9 @@
 { pkgs, ... }:
 {
+  environment.systemPackages = with pkgs; [
+    phpactor
+  ];
+
   programs.neovim = {
     viAlias = true;
     vimAlias = true;
@@ -14,6 +18,17 @@
 
         " nerdtree keybinds
         nnoremap <C-e> :NERDTreeToggle<CR>
+
+        " tabs
+        nnoremap th :tabfirst<cr>
+        nnoremap tk :tabnext<cr>
+        nnoremap tj :tabprev<cr>
+        nnoremap tl :tablast<cr>
+        nnoremap tn :tabnew<cr>
+        nnoremap tc :tabclose<cr>
+
+        " create horizontal window
+        nnoremap <c-w>h <c-w>s
       '';
       customLuaRC = ''
         -- custom lua config
@@ -50,7 +65,7 @@
             }),
 
             sources = cmp.config.sources({
-                { name = "nvim-lsp" },
+                { name = "nvim_lsp" },
                 { name =  "vsnip"},
                 { name = "emoji" }
 
@@ -61,6 +76,20 @@
 
         -- setting up lspconfig
         local capabilities = require('cmp_nvim_lsp').default_capabilities()
+
+        vim.lsp.config('phpactor', {
+          cmd = { 'phpactor', 'language-server' },
+          filetypes = { 'php' },
+          root_markers = { '.git', 'composer.json', '.phpactor.json', '.phpactor.yml' },
+          workspace_required = true,
+            init_options = {
+              ["language_server_phpstan.enabled"] = false,
+              ["language_server_psalm.enabled"] = false,
+          },
+        capabilities = capabilities,
+        })
+        vim.lsp.enable('phpactor')
+
 
         -- lualine status bar
         require('lualine').setup({
@@ -103,6 +132,7 @@
           cmp-emoji
 
           # lsp
+          phpactor
 
           # status bar
           lualine-nvim
