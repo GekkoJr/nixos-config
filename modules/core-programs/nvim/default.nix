@@ -4,7 +4,7 @@
     phpactor
     vue-language-server
     lua-language-server
-    typescript-language-server
+    nodePackages.typescript-language-server
     nil # nix language server
   ];
 
@@ -15,10 +15,15 @@
     vimAlias = true;
     enable = true;
     defaultEditor = true;
+    withNodeJs = true;
 
     configure = {
       customRC = lib.fileContents ./init.vim;
-      customLuaRC = lib.fileContents ./init.lua;
+      customLuaRC = builtins.readFile (
+        pkgs.replaceVars ./init.lua {
+          vue_typescript_plugin_location = "${pkgs.vue-language-server}/lib/language-tools/packages/language-server";
+        }
+      );
       packages.myVimPackage = with pkgs.vimPlugins; {
         # loaded on launch
         start = [

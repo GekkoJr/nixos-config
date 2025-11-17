@@ -1,8 +1,10 @@
 -- making nix actually use lua directory, may be redundant?
 package.path = package.path .. ";" .. vim.fn.stdpath("config") .. "/lua/?.lua"
 
--- setting up lspconfig
-local capabilities = require('cmp_nvim_lsp').default_capabilities()
+-- globals to be replaced by nix build
+Globals = {
+    vue_typescript_plugin_location = "@vue_typescript_plugin_location@",
+}
 
 -- setting up language servers
 require("language-servers")

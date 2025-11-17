@@ -3,11 +3,7 @@ vim.lsp.config("ts_ls", {
     plugins = {
       {
         name = "@vue/typescript-plugin",
-        -- it's a hack for nixOS /nix/store/
-        location = vim.fs.joinpath(
-          vim.fs.dirname(vim.fs.dirname(vim.fn.system "echo -n $(readlink -f $(which vue-language-server))")),
-          "lib/node_modules/@vue/language-server"
-        ),
+        location = Globals.vue_typescript_plugin_location,
         languages = { "vue" },
       },
     },
@@ -20,7 +16,9 @@ vim.lsp.config("ts_ls", {
     "vue",
   },
 
-  root_markers = {"package.json"}
+  root_markers = { "tsconfig.json", "jsconfig.json", "package.json", ".git" },
 })
 
+vim.lsp.config("vue_ls", {})
 vim.lsp.enable("ts_ls")
+vim.lsp.enable("vue_ls")
