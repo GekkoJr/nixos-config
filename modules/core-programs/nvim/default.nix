@@ -5,6 +5,7 @@
     vue-language-server
     lua-language-server
     vtsls
+    nil # nix language server
   ];
 
   environment.etc."xdg/nvim".source = ../nvim;
