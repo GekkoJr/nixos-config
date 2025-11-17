@@ -2,6 +2,8 @@
 {
   environment.systemPackages = with pkgs; [
     phpactor
+    vue-language-server
+    vtsls
   ];
 
   programs.neovim = {
@@ -73,6 +75,37 @@
                 { name = "buffer" }
             })
         })
+        -- setting up vue-language-server
+        local vue_language_server_path = "${pkgs.vue-language-server}/bin/vue-language-server"
+        local tsserver_filetypes = { 'typescript', 'javascript', 'javascriptreact', 'typescriptreact', 'vue' }
+        local vue_plugin = {
+          name = '@vue/typescript-plugin',
+          location = vue_language_server_path,
+          languages = { 'vue' },
+          configNamespace = 'typescript',
+        }
+        local vtsls_config = {
+          settings = {
+            vtsls = {
+              tsserver = {
+                globalPlugins = {
+                  vue_plugin,
+                },
+            },
+          },
+        },
+        filetypes = tsserver_filetypes,
+        }
+
+        local ts_ls_config = {
+          init_options = {
+            plugins = {
+              vue_plugin,
+            },
+          },
+          filetypes = tsserver_filetypes,
+        }
+        local vue_ls_config = {}
 
         -- setting up lspconfig
         local capabilities = require('cmp_nvim_lsp').default_capabilities()
@@ -90,6 +123,10 @@
         })
         vim.lsp.enable('phpactor')
 
+        vim.lsp.config('vtsls', vtsls_config)
+        vim.lsp.config('vue_ls', vue_ls_config)
+        vim.lsp.config('ts_ls', ts_ls_config)
+        vim.lsp.enable({'vtsls', 'vue_ls'})
 
         -- lualine status bar
         require('lualine').setup({
@@ -109,6 +146,11 @@
           },
         })
 
+        -- toggleterm 
+        require("toggleterm").setup{
+          open_mapping = [[<C-\>]],
+        }
+
       '';
       packages.myVimPackage = with pkgs.vimPlugins; {
         # loaded on launch
@@ -119,6 +161,7 @@
           nvim-treesitter.withAllGrammars
           ctrlp
           nerdtree
+          toggleterm-nvim
 
           #snippets
           cmp-vsnip
