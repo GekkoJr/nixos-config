@@ -6,6 +6,8 @@
     vtsls
   ];
 
+  environment.etc."xdg/nvim".source = ../nvim;
+
   programs.neovim = {
     viAlias = true;
     vimAlias = true;
