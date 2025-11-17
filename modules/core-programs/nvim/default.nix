@@ -13,25 +13,7 @@
     defaultEditor = true;
 
     configure = {
-      customRC = ''
-        " custom vimscript
-        let mapleader = "\<space>"
-        let maplocalleader = "\<space>"
-
-        " nerdtree keybinds
-        nnoremap <C-e> :NERDTreeToggle<CR>
-
-        " tabs
-        nnoremap th :tabfirst<cr>
-        nnoremap tk :tabnext<cr>
-        nnoremap tj :tabprev<cr>
-        nnoremap tl :tablast<cr>
-        nnoremap tn :tabnew<cr>
-        nnoremap tc :tabclose<cr>
-
-        " create horizontal window
-        nnoremap <c-w>h <c-w>s
-      '';
+      customRC = lib.fileContents ./init.vim;
       customLuaRC = lib.fileContents ./init.lua;
       packages.myVimPackage = with pkgs.vimPlugins; {
         # loaded on launch
@@ -43,6 +25,9 @@
           ctrlp
           nerdtree
           toggleterm-nvim
+
+          # theme
+          catppuccin-nvim
 
           #snippets
           cmp-vsnip
