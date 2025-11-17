@@ -18,3 +18,4 @@ vim.lsp.config("nix_ls", {
         }
     }
 })
+vim.lsp.enable("nix_ls")
