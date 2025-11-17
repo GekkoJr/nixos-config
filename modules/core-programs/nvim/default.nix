@@ -3,6 +3,7 @@
   environment.systemPackages = with pkgs; [
     phpactor
     vue-language-server
+    lua-language-server
     vtsls
   ];
 
