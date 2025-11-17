@@ -26,7 +26,7 @@
           vim-nix
           nvim-treesitter.withAllGrammars
           ctrlp
-          nerdtree
+          neo-tree-nvim
           toggleterm-nvim
 
           # theme
