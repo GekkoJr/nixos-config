@@ -9,3 +9,10 @@ require("language-servers")
 
 -- enable plugins
 require("plugins")
+
+vim.diagnostic.config({
+    virtual_text = true,  -- show messages inline
+    signs = true,         -- keep gutter signs
+    underline = true,
+    update_in_insert = false,
+})

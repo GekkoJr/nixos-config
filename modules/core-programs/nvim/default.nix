@@ -4,7 +4,7 @@
     phpactor
     vue-language-server
     lua-language-server
-    vtsls
+    typescript-language-server
     nil # nix language server
   ];
 
