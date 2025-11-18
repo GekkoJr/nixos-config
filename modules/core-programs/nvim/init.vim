@@ -16,8 +16,13 @@ nnoremap tl :tablast<cr>
 nnoremap tn :tabnew<cr>
 nnoremap tc :tabclose<cr>
 
-" create horizontal window
-nnoremap <c-w>h <c-w>s
+" window management
+nnoremap <C-n> :vsplit<CR>
+nnoremap <C-c> :q<CR>
+nnoremap <DOWN> :wincmd j<CR>
+nnoremap <UP> :wincmd k<CR>
+nnoremap <LEFT> :wincmd h<CR>
+nnoremap <RIGHT> :wincmd l<CR>
 
 " enables relative numbering off lines
 set relativenumber
