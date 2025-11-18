@@ -6,6 +6,7 @@
     lua-language-server
     nodePackages.typescript-language-server
     nil # nix language server
+    pyright
   ];
 
   environment.etc."xdg/nvim".source = ../nvim;
