@@ -5,5 +5,6 @@
     ./kicad.nix
     ./krita.nix
     ./orca.nix
+    ./kdenlive.nix
   ];
 }
