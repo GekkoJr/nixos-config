@@ -15,6 +15,7 @@
     signal-desktop
     ffmpeg
     appimage-run
+    paprefs
   ];
 
   programs.nix-ld.enable = true;
