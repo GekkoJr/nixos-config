@@ -78,6 +78,8 @@
             {
               home-manager.useGlobalPkgs = true;
               home-manager.useUserPackages = true;
+              home-manager.overwriteBackup = true;
+              home-manager.backupFileExtension = "backup";
               home-manager.users.gekko = ./hosts/bael/home.nix;
             }
           ];

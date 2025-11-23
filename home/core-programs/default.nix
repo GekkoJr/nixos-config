@@ -10,5 +10,6 @@
     ./gtk.nix
     ./kitty.nix
     ./thunderbird.nix
+    ./openfiles.nix
   ];
 }
