@@ -26,3 +26,6 @@ nnoremap <RIGHT> :wincmd l<CR>
 
 " enables relative numbering off lines
 set relativenumber
+
+" NeoGit 
+nnoremap <C-g> :Neogit<cr>

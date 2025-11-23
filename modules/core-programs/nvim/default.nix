@@ -29,11 +29,11 @@
         # loaded on launch
         start = [
           # utilitys
-          fugitive
           vim-nix
           nvim-treesitter.withAllGrammars
           ctrlp
           neo-tree-nvim
+          neogit
           toggleterm-nvim
 
           # theme

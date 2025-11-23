@@ -1,9 +1,13 @@
 { pkgs, ... }:
 {
-  programs.alvr = {
+  services.wivrn = {
     enable = true;
     openFirewall = true;
+
+    defaultRuntime = true;
+
   };
+
   programs.steam = {
     enable = true;
 
