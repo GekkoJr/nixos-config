@@ -128,10 +128,6 @@
         preserve_split = "yes";
       };
 
-      experimental = {
-        xx_color_management_v4 = true;
-      };
-
       windowrulev2 = [
         # Fix linux enable ir emitter stealing focus
         "nofocus,class:linux-enable-ir-emitter,title:linux-enable-ir-emitter,floating:1"

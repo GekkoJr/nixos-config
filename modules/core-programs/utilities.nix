@@ -5,7 +5,8 @@
     mpv
     zip
     unzip
-    python3
+    python313
+    python313Packages.tkinter
     killall
     libnotify
     dunst
@@ -19,4 +20,14 @@
   ];
 
   programs.nix-ld.enable = true;
+  programs.nix-ld.libraries = with pkgs; [
+    glibc
+    zlib
+    qt5.qtbase
+    qt5.qtdeclarative
+    qt5.qtquickcontrols
+    qt5.qtquickcontrols2
+    qt5.qtsvg
+    qt5.qtgraphicaleffects
+  ];
 }
