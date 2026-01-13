@@ -2,6 +2,7 @@
 {
   environment.systemPackages = with pkgs; [
     phpactor
+    jdt-language-server
     vue-language-server
     lua-language-server
     nodePackages.typescript-language-server
@@ -52,6 +53,7 @@
 
           # lsp
           phpactor
+          nvim-jdtls
 
           # status bar
           lualine-nvim
