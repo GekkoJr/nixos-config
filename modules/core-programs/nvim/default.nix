@@ -8,6 +8,16 @@
     nodePackages.typescript-language-server
     nil # nix language server
     pyright
+    zathura # pdf viewer
+    (texliveMedium.withPackages (ps: [
+      ps.latexmk
+      ps.eulervm
+      ps.datetime
+      ps.fmtcount
+      ps.chngcntr
+      ps.ntheorem
+      ps.enumitem
+    ]))
   ];
 
   environment.etc."xdg/nvim".source = ../nvim;
@@ -50,10 +60,14 @@
           cmp-nvim-lsp
           cmp-buffer
           cmp-emoji
+          cmp-vimtex
 
           # lsp
           phpactor
           nvim-jdtls
+
+          # Latex
+          vimtex
 
           # status bar
           lualine-nvim

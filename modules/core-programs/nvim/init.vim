@@ -29,3 +29,9 @@ set relativenumber
 
 " NeoGit 
 nnoremap <C-g> :Neogit<cr>
+
+" pdf viewer
+let g:vimtex_view_method = 'zathura'
+
+" latex compiler
+let g:vimtex_compiler_method = 'latexmk'
