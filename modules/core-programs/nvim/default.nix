@@ -61,6 +61,7 @@
           cmp-buffer
           cmp-emoji
           cmp-vimtex
+          cmp-path
 
           # lsp
           phpactor

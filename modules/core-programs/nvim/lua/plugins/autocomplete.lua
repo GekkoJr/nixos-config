@@ -35,7 +35,8 @@ cmp.setup({
         { name = "nvim_lsp" }, -- the nvim language server, see lua/language-servers for langueges added
         { name =  "vsnip"}, -- snippets
         { name = "emoji" }, -- markdown emojis
-	{ name = "vimtex" } -- latex
+	{ name = "vimtex" }, -- latex
+	{ name = "path" } -- path completion 
     }, {
         { name = "buffer" }
     })
