@@ -11,7 +11,7 @@
     libnotify
     dunst
     loupe
-    nixfmt-rfc-style
+    nixfmt
     geteduroam
     signal-desktop
     ffmpeg
