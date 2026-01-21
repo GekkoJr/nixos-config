@@ -42,6 +42,21 @@
                 url = "https://devilry.ifi.uio.no/";
                 keyword = "devilry";
               }
+              {
+                name = "IN1010";
+                url = "https://www.uio.no/studier/emner/matnat/ifi/IN1010/v26/index.html";
+                keyword = "in1010";
+              }
+              {
+                name = "IN1030";
+                url = "https://www.uio.no/studier/emner/matnat/ifi/IN1030/v26/index.html";
+                keyword = "in1030";
+              }
+              {
+                name = "IN1150";
+                url = "https://www.uio/studier/emner/matnat/ifi/IN1150/v26/index.html";
+                keyword = "in1150";
+              }
             ];
           }
         ];
