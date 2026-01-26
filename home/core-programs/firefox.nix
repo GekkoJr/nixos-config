@@ -54,7 +54,7 @@
               }
               {
                 name = "IN1150";
-                url = "https://www.uio/studier/emner/matnat/ifi/IN1150/v26/index.html";
+                url = "https://www.uio.no/studier/emner/matnat/ifi/IN1150/v26/index.html";
                 keyword = "in1150";
               }
             ];

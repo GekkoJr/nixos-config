@@ -9,7 +9,6 @@
     python313Packages.tkinter
     killall
     libnotify
-    dunst
     loupe
     nixfmt
     geteduroam
