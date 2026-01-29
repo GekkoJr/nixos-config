@@ -6,7 +6,7 @@ let mapleader = "\<space>"
 let maplocalleader = "\<space>"
 
 " nerdtree keybinds
-nnoremap <C-e> :Neotree<CR>
+nnoremap <C-e> :Neotree toggle reveal<CR>
 
 " tabs
 nnoremap th :tabfirst<cr>
