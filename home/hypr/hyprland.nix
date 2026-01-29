@@ -128,23 +128,41 @@
         preserve_split = "yes";
       };
 
-      windowrulev2 = [
-        # Fix linux enable ir emitter stealing focus
-        "nofocus,class:linux-enable-ir-emitter,title:linux-enable-ir-emitter,floating:1"
+      windowrule = [
+        {
+          name = "Linux IR emitter fix";
+          "match:class" = "linux-enable-ir-emitter";
+          "match:title" = "linux-enable-ir-emitter";
+          no_initial_focus = true;
+        }
+        {
+          name = "Jetbrains fix-1";
+          "match:class" = "^(jetbrains-.*)$";
+          "match:title" = "^(splash)$";
 
-        # https://github.com/hyprwm/Hyprland/issues/3450#issuecomment-1816761575
-        # -- Fix odd behaviors in IntelliJ IDEs --
-        # Fix splash screen showing in weird places and prevent annoying focus takeovers
-        "center,class:^(jetbrains-.*)$,title:^(splash)$,floating:1"
-        "nofocus,class:^(jetbrains-.*)$,title:^(splash)$,floating:1"
-        "noborder,class:^(jetbrains-.*)$,title:^(splash)$,floating:1"
+          no_initial_focus = true;
+          center = true;
+          border_size = 0;
+          float = true;
+        }
+        {
+          name = "Jetbrains fix-2";
+          "match:class" = "^(jetbrains-.*)$";
+          "match:title" = "^()$";
 
-        # Center popups/find windows
-        "center,class:^(jetbrains-.*)$,title:^( )$,floating:1"
-        "stayfocused,class:^(jetbrains-.*)$,title:^( )$,floating:1"
-        "noborder,class:^(jetbrains-.*)$,title:^( )$,floating:1"
-        #! Disable window flicker when autocomplete or tooltips appear
-        "nofocus,class:^(jetbrains-.*)$,title:^(win.*)$,floating:1"
+          center = true;
+          float = true;
+          border_size = 0;
+          stay_focused = true;
+        }
+        {
+          name = "Jetbrains fix-3";
+          "match:class" = "^(jetbrains-.*)$";
+          "match:title" = "^(win.*)$";
+
+          float = true;
+          no_initial_focus = true;
+        }
       ];
 
       xwayland.force_zero_scaling = true;
