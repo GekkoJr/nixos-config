@@ -16,9 +16,6 @@
     # adding home manager for dotfiles
     home-manager.url = "github:nix-community/home-manager";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
-
-    # adding howdy for windows hello like unlocking
-    howdy-pkg.url = "github:fufexan/nixpkgs/howdy";
   };
 
   outputs =
@@ -28,7 +25,6 @@
       home-manager,
       nur,
       stylix,
-      howdy-pkg,
       ...
     }:
     {

@@ -5,7 +5,6 @@
   ...
 }:
 {
-  disabledModules = [ "security/pam.nix" ];
   imports = [
     ../../modules/core
     ../../modules/office
@@ -16,11 +15,6 @@
 
     #include hardware config
     ./hardware-configuration.nix
-
-    # howdy stuff
-    "${inputs.howdy-pkg}/nixos/modules/security/pam.nix"
-    "${inputs.howdy-pkg}/nixos/modules/services/security/howdy"
-    "${inputs.howdy-pkg}/nixos/modules/services/misc/linux-enable-ir-emitter.nix"
   ];
 
   networking.hostName = "asmodeus";
@@ -38,7 +32,6 @@
   services = {
     howdy = {
       enable = true;
-      package = inputs.howdy-pkg.legacyPackages.${pkgs.system}.howdy;
       settings = {
         core = {
           abort_if_ssh = true;
@@ -49,11 +42,12 @@
           device_path = "/dev/video2";
         };
       };
+
+      control = "sufficient";
     };
 
     linux-enable-ir-emitter = {
       enable = true;
-      package = inputs.howdy-pkg.legacyPackages.${pkgs.system}.linux-enable-ir-emitter;
     };
   };
 
