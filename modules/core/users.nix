@@ -12,6 +12,7 @@
       "networkmanager"
       "wheel"
       "dialout"
+      "disk"
     ];
   };
 }

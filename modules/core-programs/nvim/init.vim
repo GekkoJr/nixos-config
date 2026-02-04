@@ -35,3 +35,7 @@ let g:vimtex_view_method = 'zathura'
 
 " latex compiler
 let g:vimtex_compiler_method = 'latexmk'
+
+" fix tab with 
+set tabstop=4
+set shiftwidth=4

@@ -22,6 +22,7 @@
 
   environment.systemPackages = with pkgs; [
     #ollama-rocm
+    rpi-imager
   ];
 
   #Do not change!
