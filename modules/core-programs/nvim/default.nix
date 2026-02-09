@@ -17,6 +17,7 @@
       ps.chngcntr
       ps.ntheorem
       ps.enumitem
+      ps.tikz-cd
     ]))
   ];
 
