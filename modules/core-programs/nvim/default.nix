@@ -43,7 +43,7 @@
           # utilitys
           vim-nix
           nvim-treesitter.withAllGrammars
-          ctrlp
+          ctrlp-vim
           neo-tree-nvim
           neogit
           toggleterm-nvim
@@ -73,6 +73,9 @@
 
           # status bar
           lualine-nvim
+
+          # merge conflicts tool
+          vim-mergetool
         ];
         # manually loadable by calling `:packadd $plugin-name`
         opt = [ ];

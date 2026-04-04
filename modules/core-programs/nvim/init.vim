@@ -39,3 +39,8 @@ let g:vimtex_compiler_method = 'latexmk'
 " fix tab with 
 set tabstop=4
 set shiftwidth=4
+
+" tool for solving git conflicts
+let g:mergetool_layout = 'bmr'
+let g:mergetool_prefer_revision = 'local'
+nnoremap <C-m> :MergetoolToggle<CR>
