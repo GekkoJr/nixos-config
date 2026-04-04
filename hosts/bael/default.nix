@@ -22,8 +22,21 @@
 
   environment.systemPackages = with pkgs; [
     #ollama-rocm
-    rpi-imager
   ];
+
+  services.avahi = {
+    enable = true;
+    nssmdns4 = true;
+    openFirewall = true;
+  };
+
+  services.printing = {
+    enable = true;
+    drivers = with pkgs; [
+      cups-filters
+      cups-browsed
+    ];
+  };
 
   #Do not change!
   system.stateVersion = "25.05";

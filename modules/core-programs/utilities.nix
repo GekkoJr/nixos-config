@@ -16,6 +16,9 @@
     ffmpeg
     appimage-run
     paprefs
+    stegsolve
+    exiftool
+    zsteg
   ];
 
   programs.nix-ld.enable = true;
