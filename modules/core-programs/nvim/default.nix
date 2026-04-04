@@ -43,7 +43,7 @@
           # utilitys
           vim-nix
           nvim-treesitter.withAllGrammars
-          ctrlp
+          ctrlp-vim
           neo-tree-nvim
           neogit
           toggleterm-nvim
