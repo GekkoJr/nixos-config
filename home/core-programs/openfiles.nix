@@ -24,7 +24,7 @@
       ],
       "runtime" :
       [
-        "${pkgs.opencomposite}/lib/opencomposite"
+      "/home/gekko/.steam/steam/steamapps/common/SteamVR"
       ],
       "version" : 1
     }

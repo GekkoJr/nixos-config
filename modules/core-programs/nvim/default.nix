@@ -5,7 +5,6 @@
     jdt-language-server
     vue-language-server
     lua-language-server
-    nodePackages.typescript-language-server
     nil # nix language server
     pyright
     zathura # pdf viewer

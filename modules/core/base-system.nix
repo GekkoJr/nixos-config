@@ -31,7 +31,7 @@
     wget
     curl
     git
-    neofetch
+    fastfetch
   ];
 
   security.polkit.enable = true;
