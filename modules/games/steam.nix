@@ -19,5 +19,7 @@
   environment.systemPackages = with pkgs; [
     gamescope
     protontricks
+    rpcs3
+    r2modman
   ];
 }
