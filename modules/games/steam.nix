@@ -21,6 +21,5 @@
     protontricks
     rpcs3
     r2modman
-    nexusmods-app-unfree
   ];
 }
