@@ -6,6 +6,7 @@
     hyprlock
     hyprpaper
     hyprshot
+    hyprshutdown
     kitty
     wofi
     wofi

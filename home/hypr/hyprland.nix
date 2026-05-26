@@ -48,10 +48,86 @@
           _args = [
             "SUPER + R"
             (lib.generators.mkLuaInline "hl.dsp.exec_cmd(\"wofi --show drun \")")
-
           ];
         }
-      ];
+        {
+          _args = [
+            "SUPER + L"
+            (lib.generators.mkLuaInline "hl.dsp.exec_cmd(\"hyprlock\")")
+          ];
+        }
+        {
+          _args = [
+            "SUPER + F"
+            (lib.generators.mkLuaInline "hl.dsp.window.fullscreen(\"fullscreen\", \"toggle\")")
+          ];
+        }
+        {
+          # hyprshutdown is a graceful shutdown utility for hyprland (better than old hl.dsp.exit())
+          _args = [
+            "SUPER + M"
+            (lib.generators.mkLuaInline "hl.dsp.exec_cmd(\"hyprshutdown\")")
+          ];
+        }
+        {
+          _args = [
+            "SUPER + CTRL + S"
+            (lib.generators.mkLuaInline "hl.dsp.exec_cmd(\"hyprshot -m region --clipboard-only \")")
+          ];
+        }
+        {
+          _args = [
+            "SUPER + S"
+            (lib.generators.mkLuaInline "hl.dsp.workspace.toggle_special(\"magic\")")
+          ];
+        }
+        {
+          _args = [
+            "SUPER + SHIFT + S"
+            (lib.generators.mkLuaInline "hl.dsp.window.move({workspace = \"special:magic\"})")
+          ];
+        }
+        {
+          _args = [
+            "SUPER + CTRL + V"
+            (lib.generators.mkLuaInline "hl.dsp.window.float({action = toggle})")
+          ];
+        }
+        {
+          _args = [
+            "SUPER + mouse:272"
+            (lib.generators.mkLuaInline "hl.dsp.window.drag()")
+          ];
+        }
+        {
+          _args = [
+            "SUPER + mouse:273"
+            (lib.generators.mkLuaInline "hl.dsp.window.resize()")
+          ];
+        }
+      ]
+      ++ (builtins.concatLists (
+        builtins.genList (
+          i:
+          let
+            ws = i + 1;
+          in
+          [
+            {
+              _args = [
+                "SUPER + ${if ws != 10 then toString ws else toString 0}"
+                (lib.generators.mkLuaInline "hl.dsp.focus({workspace = ${toString ws}})")
+              ];
+            }
+            {
+              _args = [
+                "SUPER + SHIFT + ${if ws != 10 then toString ws else toString 0}"
+                (lib.generators.mkLuaInline "hl.dsp.window.move({workspace = ${toString ws}})")
+              ];
+            }
+          ]
+        ) 10
+      ));
 
       config = {
         general = {
