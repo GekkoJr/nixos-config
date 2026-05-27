@@ -24,6 +24,7 @@
 
   environment.systemPackages = with pkgs; [
     ollama
+    lmstudio
   ];
 
   #Do not change!
