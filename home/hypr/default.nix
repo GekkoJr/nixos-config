@@ -5,7 +5,7 @@
     ./hyprlock.nix
     ./hyprpaper.nix
     ./hypridle.nix
-    ./hyprpanel.nix
     ./hyprpolkit.nix
+    ./wayle.nix
   ];
 }
