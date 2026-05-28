@@ -105,6 +105,12 @@
             (lib.generators.mkLuaInline "hl.dsp.window.resize()")
           ];
         }
+        {
+          _args = [
+            "SUPER + E"
+            (lib.generators.mkLuaInline "hl.dsp.exec_cmd(\"thunar\")")
+          ];
+        }
       ]
       ++ (builtins.concatLists (
         builtins.genList (
