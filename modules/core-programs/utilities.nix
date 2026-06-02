@@ -20,6 +20,7 @@
     stegsolve
     exiftool
     zsteg
+    tmux
   ];
 
   services.libinput.enable = true;

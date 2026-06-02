@@ -13,6 +13,7 @@
       "wheel"
       "dialout"
       "disk"
+      "docker"
     ];
   };
 }

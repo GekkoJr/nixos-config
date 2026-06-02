@@ -23,12 +23,13 @@
   networking.networkmanager.enable = true;
 
   environment.systemPackages = with pkgs; [
-    ollama
-    lmstudio
+    docker
   ];
 
   #Do not change!
   system.stateVersion = "25.05";
+
+  virtualisation.docker.enable = true;
 
   services = {
     howdy = {
