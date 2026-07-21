@@ -21,15 +21,28 @@
 
   # enable networking
   networking.networkmanager.enable = true;
+  services.printing = {
+    enable = true;
+    drivers = with pkgs; [
+      cups-filters
+      cups-browsed
+    ];
 
+  };
   environment.systemPackages = with pkgs; [
     docker
+    lmstudio
   ];
 
   #Do not change!
   system.stateVersion = "25.05";
 
   virtualisation.docker.enable = true;
+  services.avahi = {
+    enable = true;
+    nssmdns4 = true;
+    openFirewall = true;
+  };
 
   services = {
     howdy = {
