@@ -111,6 +111,36 @@
             (lib.generators.mkLuaInline "hl.dsp.exec_cmd(\"thunar\")")
           ];
         }
+        {
+          _args = [
+            "XF86MonBrightnessUp"
+            (lib.generators.mkLuaInline "hl.dsp.exec_cmd(\"brightnessctl set +5% \")")
+          ];
+        }
+        {
+          _args = [
+            "XF86MonBrightnessDown"
+            (lib.generators.mkLuaInline "hl.dsp.exec_cmd(\"brightnessctl set 5%- \")")
+          ];
+        }
+        {
+          _args = [
+            "XF86AudioMute"
+            (lib.generators.mkLuaInline "hl.dsp.exec_cmd(\"wpctl set-mute @DEFAULT_SINK@ toggle\")")
+          ];
+        }
+        {
+          _args = [
+            "XF86AudioLowerVolume"
+            (lib.generators.mkLuaInline "hl.dsp.exec_cmd(\"wpctl set-volume @DEFAULT_SINK@ 5%- -l 1.0\")")
+          ];
+        }
+        {
+          _args = [
+            "XF86AudioRaiseVolume"
+            (lib.generators.mkLuaInline "hl.dsp.exec_cmd(\"wpctl set-volume @DEFAULT_SINK@ +5% -l 1.0\")")
+          ];
+        }
       ]
       ++ (builtins.concatLists (
         builtins.genList (
