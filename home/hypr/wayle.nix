@@ -1,4 +1,4 @@
-{ ... }:
+{ lib, ... }:
 {
   services.wayle = {
     enable = true;
@@ -51,7 +51,8 @@
         };
       };
       styling = {
-        palette = {
+        # this needs to be forced as stylix is trying to set these to god awful colors
+        palette = lib.mkForce {
           bg = "#11111b";
           blue = "#74c7ec";
           elevated = "#1e1e2e";
