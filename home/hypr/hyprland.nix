@@ -138,7 +138,7 @@
         {
           _args = [
             "XF86AudioRaiseVolume"
-            (lib.generators.mkLuaInline "hl.dsp.exec_cmd(\"wpctl set-volume @DEFAULT_SINK@ +5% -l 1.0\")")
+            (lib.generators.mkLuaInline "hl.dsp.exec_cmd(\"wpctl set-volume @DEFAULT_SINK@ 5%+ -l 1.0\")")
           ];
         }
       ]
